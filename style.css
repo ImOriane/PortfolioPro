@@ -1,0 +1,593 @@
+/* Reset default css des navigateurs */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/***********************************************************************************/
+
+/* Création de variable couleurs */
+:root {
+  --couleur_principale: #ab19ff;
+  --couleur_secondaire: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0d0f2f;
+}
+/* Barre de navigation top */
+
+
+
+.bgfadeOut {
+  -webkit-animation: bgfadeOut 1s forwards;
+  -moz-animation: bgfadeOut 1s forwards;
+  -o-animatio: bgfadeOut 1s forwards;
+  animation: bgfadeOut 1s forwards;
+}
+
+.bgfadeIn {
+  -webkit-animation: bgfadeIn 1s forwards;
+  -moz-animation: bgfadeIn 1s forwards;
+  -o-animatio: bgfadeIn 1s forwards;
+  animation: bgfadeIn 1s forwards;
+}
+
+
+
+header {
+  /*police des catégories dans le menu, et leurs positions sur la page + espacement entre chaque catégories */
+  font-family: Arial, sans-serif;
+  width: 100%;
+  padding-top: 60px;
+  text-align: right;
+  float: left;
+}
+header .credit a {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 40px;
+  color: var(--couleur_secondaire);
+  text-decoration: none;
+}
+header .credit a:hover {
+  /* :hover = Propriété lors du survol d'un à la souris */
+  color: var(--couleur_principale);
+  transition: all 0.3s; /* durée d'animation pour passer de l'état non survolé à survolé */
+}
+
+header .left {
+  margin-left: 2.5%;
+  float: left;
+}
+header .right {
+  margin-right: 2.5%;
+  float: right;
+}
+
+header hr {
+  width: 95%;
+  margin: 55px auto;
+}
+
+nav ul li {
+  /*met en ligne les catégories du menu*/
+  display: inline;
+  margin: 0 30px;
+}
+
+nav ul li .numerotation {
+  /*couleurs des catégorie empeche d'avoir un souligement + gras */
+  font-size: 25px;
+  color: var(--couleur_principale);
+  font-weight: bold;
+}
+nav ul li a {
+  /*couleurs des catégorie empeche d'avoir un souligement + gras */
+  font-size: 20px;
+  color: var(--couleur_secondaire);
+  text-decoration: none;
+}
+nav ul li a:hover {
+  /* :hover = Propriété lors du survol d'un à la souris */
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.3s; /* durée d'animation pour passer de l'état non survolé à survolé */
+}
+
+/***********************************************************************************/
+
+/* Contenu de la page d'accueil */
+.content {
+  width: 100%;
+  padding: 18% 0 0 5%;
+}
+.hero {
+  width: 40%;
+  text-align: center;
+}
+.hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 130px;
+  color: var(--couleur_principale);
+  opacity: 0;
+  -webkit-animation: 1s slide_gauche 1s forwards;
+  -moz-animation: 1s slide_gauche 1s forwards;
+  -o-animation: 1s slide_gauche 1s forwards;
+  animation: 1s slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
+}
+
+
+.hero h2 {
+  width: 140px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 40px;
+  color: var(--couleur_secondaire);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.hero h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--couleur_secondaire);
+  opacity: 0;
+  animation: 1s apparition 1s forwards;
+}
+
+/***********************************************************************************/
+
+
+
+/*Contenu de la page à propos*/
+
+.presentation {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+.present {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--couleur_principale);
+}
+/***********************************************************************************/
+
+/*Contenu de la page tableau*/
+
+.tableau h1{
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  margin-top: -100px;
+  font-weight: 400;
+  font-size: 130px;
+  color: var(--couleur_principale);
+  opacity: 0;
+  -webkit-animation:  slide_gauche 1s forwards;
+  -moz-animation: slide_gauche 1s forwards;
+  -o-animation:  slide_gauche 1s forwards;
+  animation: slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
+
+}
+
+.imagtab img{
+
+  text-align: center;
+  width: 50%;
+}
+
+
+.imagtab {
+
+  text-align: center;
+
+}
+
+
+.presentation{
+  display: flex;
+  margin-top: -100px;
+  
+}
+
+
+.col{
+  flex:1;
+  padding-left: 100px;
+ 
+}
+
+.present h1{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 130px;
+  color:var(--couleur_principale);
+  left:500px;
+   -webkit-animation: slide_gauche 1.5s forwards;
+  -moz-animation: slide_gauche 1.5s forwards;
+  -o-animation: slide_gauche 1.5s forwards;
+  animation: slide_gauche 1.5s  forwards; 
+}
+
+.present h2{
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 25px;
+  color:var(--couleur_secondaire);
+  -webkit-animation:fade 3s forwards;
+  -moz-animation: fade 3s forwards;
+  -o-animation: fade 3s forwards;
+  animation: fade 3s  forwards;
+
+}
+
+.avatar {
+  left:600px;
+  -webkit-animation:fade 3s forwards;
+  -moz-animation: fade 3s forwards;
+  -o-animation: fade 3s forwards;
+  animation: fade 3s  forwards;
+}
+
+
+
+.presentcontact
+{ 
+margin-top: -100px;
+text-align: center;
+font-family: "Bebas Neue", sans-serif;
+font-weight: 400;
+font-size: 130px;
+color:var(--couleur_principale);
+left:500px;
+-webkit-animation: slide_gauche 1.5s forwards;
+-moz-animation: slide_gauche 1.5s forwards;
+-o-animation: slide_gauche 1.5s forwards;
+animation: slide_gauche 1.5s  forwards; 
+}
+
+
+.imagein {
+
+  position: relative;
+  left: -100px;
+
+}
+
+
+.imagein img{
+  width: 10%;
+}
+
+.imagetel{
+
+  position: relative;
+  left: -100px;
+
+}
+
+
+.imagetel img{
+  width: 5%;
+}
+
+
+/*Toutes les animations*/
+
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 140px;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--couleur_secondaire);
+  }
+}
+
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide_gauche {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  17% {
+    opacity: 0.2;
+  }
+  24% {
+    opacity: 0.4;
+  }
+  46% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+
+@keyframes bgfadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bgfadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.myButton {
+  position: relative;
+  top: -200px;
+  left: 300px;
+  background:linear-gradient(to left, #8042FE 5%, #AA31FD  100%);
+  background-color:#AA31FD ;
+  border-radius:100px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:27px;
+  padding:25px 72px;
+  text-decoration:none;
+  text-shadow:2px 0px 0px #050505;
+  -webkit-animation:fade 3s forwards;
+  -moz-animation: fade 3s forwards;
+  -o-animation: fade 3s forwards;
+  animation: fade 3s  forwards;
+}
+.myButton:hover {
+  background:linear-gradient(to left, #AA31FD  5%, #8042FE 100%);
+  background-color:#AA31FD ;
+}
+
+.cont h1{
+  position:absolute;
+  top: 200px;
+  left: 580px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 130px;
+  color:var(--couleur_principale);
+   -webkit-animation: slide_gauche 1.5s forwards;
+  -moz-animation: slide_gauche 1.5s forwards;
+  -o-animation: slide_gauche 1.5s forwards;
+  animation: slide_gauche 1.5s  forwards; 
+
+}
+.lin{
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 200px;
+}
+
+
+.veillete h2{
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--couleur_principale);
+  opacity: 0;
+  animation: 1s apparition 1s forwards;
+
+}
+
+.veillete h4{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--couleur_principale);
+  opacity: 0;
+  animation: 1s apparition 1s forwards;
+
+}
+.veillete h3{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+  color: var(--couleur_secondaire);
+  opacity: 0;
+  animation: 1s apparition 1s forwards;
+
+}
+.veillete h5{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+  color: var(--couleur_secondaire);
+  opacity: 0;
+  animation: 1s apparition 1s forwards;
+
+}
+.veillete h7{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+  color: var(--couleur_secondaire);
+  opacity: 0;
+  animation: 1s apparition 1s forwards;
+
+}
+.veillete h6{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--couleur_principale);
+  opacity: 0;
+  animation: 1s apparition 1s forwards;
+
+}
+.veillete h1{
+  position:absolute;
+  top: 200px;
+  left: 580px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 130px;
+  color:var(--couleur_principale);
+   -webkit-animation: slide_gauche 1.5s forwards;
+  -moz-animation: slide_gauche 1.5s forwards;
+  -o-animation: slide_gauche 1.5s forwards;
+  animation: slide_gauche 1.5s  forwards; 
+}
