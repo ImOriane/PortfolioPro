@@ -1,7 +1,0 @@
-- Transformer le liste dans la barre de nav en un fichier et l'appeler dans les autres
-- Changer la police dans a propos et reduire la taille de l'image de profil voir la modifier
-- Mettre a jour mes projets!
-- Rendre la page contact pro et moins cochon
--clean le code
-- revoir page contact; lindklin a completé?
-- mettre cv a jour et rendr eplus jolie le bouton pour dl le cv , (ombre sur l'ecriture moche?)
