@@ -141,7 +141,14 @@ html {
 }
 /* Barre de navigation top */
 
-
+@keyframes fade {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .bgfadeOut {
   -webkit-animation: bgfadeOut 1s forwards;
@@ -248,7 +255,7 @@ nav ul li a:hover {
   font-family: "Pixelify Sans", sans-serif;
   font-size: 40px;
   color: var(--couleur_secondaire);
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden; /
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -288,7 +295,19 @@ nav ul li a:hover {
 /***********************************************************************************/
 
 /*Contenu de la page tableau*/
-
+.pro h1 {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    margin-top: -100px;
+    font-weight: 400;
+    font-size: 130px;
+    color: var(--couleur_principale);
+    opacity: 0;
+    -webkit-animation: slide_gauche 1s forwards;
+    -moz-animation: slide_gauche 1s forwards;
+    -o-animation: slide_gauche 1s forwards;
+    animation: slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
+}
 .tableau h1{
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
@@ -308,6 +327,7 @@ nav ul li a:hover {
 
   text-align: center;
   width: 50%;
+
 }
 
 
@@ -327,7 +347,7 @@ nav ul li a:hover {
 
 .col{
   flex:1;
-  padding-left: 100px;
+  padding-left: 130px;
  
 }
 
@@ -344,22 +364,26 @@ nav ul li a:hover {
 }
 
 .present h2{
-  font-family: "Pixelify Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
   font-size: 25px;
   color:var(--couleur_secondaire);
-  -webkit-animation:fade 3s forwards;
-  -moz-animation: fade 3s forwards;
-  -o-animation: fade 3s forwards;
-  animation: fade 3s  forwards;
+  -webkit-animation:fade 2s forwards;
+  -moz-animation: fade 2s forwards;
+  -o-animation: fade 2s forwards;
+  animation: fade 2s  forwards;
 
 }
 
-.avatar {
-  left:600px;
-  -webkit-animation:fade 3s forwards;
-  -moz-animation: fade 3s forwards;
-  -o-animation: fade 3s forwards;
-  animation: fade 3s  forwards;
+.avatar img {
+    width: 64%;
+    left:600px;
+  -webkit-animation:fade 2s forwards;
+  -moz-animation: fade 2s forwards;
+  -o-animation: fade 2s forwards;
+  animation: fade 2s  forwards;
 }
 
 
@@ -474,11 +498,12 @@ animation: slide_gauche 1.5s  forwards;
     opacity: 1;
   }
 }
-
+.bouton {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
 .myButton {
-  position: relative;
-  top: -200px;
-  left: 300px;
   background:linear-gradient(to left, #8042FE 5%, #AA31FD  100%);
   background-color:#AA31FD ;
   border-radius:100px;
@@ -489,7 +514,6 @@ animation: slide_gauche 1.5s  forwards;
   font-size:27px;
   padding:25px 72px;
   text-decoration:none;
-  text-shadow:2px 0px 0px #050505;
   -webkit-animation:fade 3s forwards;
   -moz-animation: fade 3s forwards;
   -o-animation: fade 3s forwards;
@@ -498,6 +522,7 @@ animation: slide_gauche 1.5s  forwards;
 .myButton:hover {
   background:linear-gradient(to left, #AA31FD  5%, #8042FE 100%);
   background-color:#AA31FD ;
+
 }
 
 .cont h1{
@@ -590,4 +615,103 @@ animation: slide_gauche 1.5s  forwards;
   -moz-animation: slide_gauche 1.5s forwards;
   -o-animation: slide_gauche 1.5s forwards;
   animation: slide_gauche 1.5s  forwards; 
+    }
+
+.contact-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    padding: 8rem 1rem 4rem;
 }
+.contact-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 130px;
+    color: var(--couleur_principale);
+    opacity: 0;
+    -webkit-animation: 1s slide_gauche 1s forwards;
+    -moz-animation: 1s slide_gauche 1s forwards;
+    -o-animation: 1s slide_gauche 1s forwards;
+    animation: 1s slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.03);
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.contact-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.listecontact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+
+
+    margin-left: 20%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    -webkit-animation:fade 2s forwards;
+    -moz-animation: fade 2s forwards;
+    -o-animation: fade 2s forwards;
+    animation: fade 2s  forwards;
+
+}
+
+.listecontact div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.listecontact img {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+}
+
