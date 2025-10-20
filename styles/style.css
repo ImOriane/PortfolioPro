@@ -351,9 +351,6 @@ nav ul li a:hover {
     margin-top: -100px;
 }
 
-.col {
-  flex: 1;
-}
 
 .col{
     flex:1;
@@ -501,3 +498,202 @@ nav ul li a:hover {
 
 
 
+
+/* ========== MOBILE========== */
+
+/* ========== INDEX ========== */
+
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 90px;
+    }
+    .hero h2 {
+        font-size: 35px;
+    }
+    .hero h3 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        width: 90%;
+        margin: auto;
+        padding-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero h3 {
+        font-size: 30px;
+    }
+
+    header {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    header .credit a {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 45px;
+    }
+    .hero h2 {
+        font-size: 22px;
+    }
+    .hero h3 {
+        font-size: 25px;
+    }
+}
+
+
+
+/* ========== PAGE À PROPOS  ========== */
+
+@media screen and (max-width: 1024px) {
+    .present h1 {
+        font-size: 90px;
+    }
+    .present h2 {
+        font-size: 22px;
+    }
+    .avatar img {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .presentation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .present h1 {
+        font-size: 70px;
+    }
+    .col{
+        padding-left: 0px;
+
+    }
+    .present h2 {
+        font-size: 18px;
+    }
+
+    .avatar img {
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    .myButton {
+        font-size: 20px;
+        padding: 15px 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .present h1 {
+        font-size: 50px;
+    }
+
+    .col{
+        padding-left:0px;
+    }
+    .present h2 {
+        font-size: 16px;
+    }
+    .avatar img {
+        width: 70%;
+    }
+}
+
+
+
+
+/* ========== PAGE PROJETS (projets.html) ========== */
+
+@media screen and (max-width: 1024px) {
+    .pro h1 {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pro h1 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pro h1 {
+        font-size: 50px;
+    }
+}
+
+
+
+
+
+/* ========== PAGE CONTACT ========== */
+
+
+
+@media screen and (max-width: 768px) {
+    .contact h1 {
+        font-size: 90px;
+    }
+
+    .listecontact {
+        font-size: 20px;
+    }
+
+    .listecontact img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .listecontact {
+        font-size: 18px;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .listecontact div {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contact h1 {
+        font-size: 50px;
+    }
+
+    .listecontact img {
+        width: 60px;
+        height: 60px;
+    }
+}
+/* =================================================================== */
