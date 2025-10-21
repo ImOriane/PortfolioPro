@@ -241,10 +241,7 @@ main {
 header {
   /*police des catégories dans le menu, et leurs positions sur la page + espacement entre chaque catégories */
   font-family: Arial, sans-serif;
-  width: 100%;
   padding-top: 60px;
-  text-align: right;
-  float: left;
 }
 header .credit a {
   font-family: "Bebas Neue", sans-serif;
@@ -254,7 +251,6 @@ header .credit a {
   text-decoration: none;
 }
 header .credit a:hover {
-  /* :hover = Propriété lors du survol d'un à la souris */
   color: var(--couleur_principale);
   transition: all 0.3s; /* durée d'animation pour passer de l'état non survolé à survolé */
 }
@@ -302,7 +298,6 @@ nav ul li a:hover {
 
 /* Contenu page d'accueil */
 .content {
-  width: 100%;
   padding: 9% 0 0 5%;
 }
 .hero {
@@ -397,7 +392,6 @@ nav ul li a:hover {
 
 
 .bouton {
-    width: 100%;
     text-align: center;
     margin-top: 40px;
 }
@@ -442,7 +436,6 @@ nav ul li a:hover {
 .listecontact {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 15px;
     margin-top: 20px;
 
@@ -483,7 +476,6 @@ nav ul li a:hover {
 .pro h1 {
     font-family: "Bebas Neue", sans-serif;
     text-align: center;
-    margin-top: -100px;
     font-weight: 400;
     font-size: 130px;
     color: var(--couleur_principale);
@@ -494,13 +486,95 @@ nav ul li a:hover {
     animation: slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
 
 }
+
+.projets {
+    animation: fade 1.5s forwards;
+}
+
+
+.projets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding-bottom: 80px;
+    padding-top: 30px;
+}
+
+.projet-card {
+    width: 500px;
+    background-color: white;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(171, 25, 255, 0.5);
+}
+
+.projet-image img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.projet-info {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.projet-info h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.projet-tech {
+    display: flex;
+    gap: 10px;
+}
+
+.projet-tech img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.projet-date {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: var(--couleur_principale);
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
 /***********************************************************************************/
 
 
+/************************Projets******************/
 
+.portfolio h1{
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 130px;
+    color: var(--couleur_principale);
+    opacity: 0;
+    -webkit-animation: slide_gauche 1s forwards;
+    -moz-animation: slide_gauche 1s forwards;
+    -o-animation: slide_gauche 1s forwards;
+    animation: slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
 
+}
 
-
+/***********************************************************************************/
 
 /* ========== MOBILE========== */
 
@@ -538,7 +612,6 @@ nav ul li a:hover {
     }
 
     header {
-        text-align: center;
         padding-top: 30px;
     }
 
@@ -572,6 +645,17 @@ nav ul li a:hover {
 
 
 /* ========== PAGE À PROPOS  ========== */
+@media screen and (max-width: 1850px) {
+    .present h1 {
+        font-size: 90px;
+    }
+    .present h2 {
+        font-size: 22px;
+    }
+    .avatar img {
+        width: 68%;
+    }
+}
 
 @media screen and (max-width: 1024px) {
     .present h1 {
@@ -581,7 +665,7 @@ nav ul li a:hover {
         font-size: 22px;
     }
     .avatar img {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -589,7 +673,6 @@ nav ul li a:hover {
 @media screen and (max-width: 768px) {
     .presentation {
         flex-direction: column;
-        align-items: center;
         text-align: center;
         padding: 0 20px;
     }
@@ -606,7 +689,7 @@ nav ul li a:hover {
     }
 
     .avatar img {
-        width: 60%;
+        width: 50%;
         margin-top: 20px;
     }
 
@@ -628,14 +711,14 @@ nav ul li a:hover {
         font-size: 16px;
     }
     .avatar img {
-        width: 70%;
+        width: 50%;
     }
 }
 
 
 
 
-/* ========== PAGE PROJETS (projets.html) ========== */
+/* ========== PAGE PROJETS========== */
 
 @media screen and (max-width: 1024px) {
     .pro h1 {
@@ -647,6 +730,13 @@ nav ul li a:hover {
     .pro h1 {
         font-size: 70px;
     }
+    .projets h1 {
+        font-size: 80px;
+    }
+
+    .projet-card {
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -654,7 +744,6 @@ nav ul li a:hover {
         font-size: 50px;
     }
 }
-
 
 
 
@@ -700,3 +789,37 @@ nav ul li a:hover {
     }
 }
 /* =================================================================== */
+@media screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        transform: none;
+    }
+}
+/* =================================================================== */
+
+
+
+
+.infoprojets{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 80px;
+    padding-top: 30px;
+    background-color: white;
+}
