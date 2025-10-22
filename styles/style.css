@@ -176,11 +176,12 @@ main {
 }
 
 @keyframes slide_gauche {
-    0% {
+    0% {/* L'objet appelé par l'animation commence invisible  et plus loin sur l'axe X que son origine. */
         transform: translateX(500px);
         opacity: 0;
     }
-    17% {
+    17% {/*Transition: commence à rendre l’objet visible. La propriété translateX continue de bouger jusqu’à atteindre
+         automatiquement 0px à 100%.*/
         opacity: 0.2;
     }
     24% {
@@ -189,7 +190,7 @@ main {
     46% {
         opacity: 0.6;
     }
-    100% {
+    100% {/*État final de l'animation : l'objet est désormais à sa position prédéfinie sur l'axe X et complètement visible.*/
         transform: translateX(0px);
         opacity: 1;
     }
@@ -241,7 +242,7 @@ main {
 header {
   /*police des catégories dans le menu, et leurs positions sur la page + espacement entre chaque catégories */
   font-family: Arial, sans-serif;
-  padding-top: 60px;
+  padding-top: 35px;
 }
 header .credit a {
   font-family: "Bebas Neue", sans-serif;
@@ -420,7 +421,7 @@ nav ul li a:hover {
 
 /*Contenu page contact*/
 
-.contact h1{
+.titrecontact h1{
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
   font-weight: 400;
@@ -438,9 +439,6 @@ nav ul li a:hover {
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
-
-
-    margin-left: 20%;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -460,10 +458,86 @@ nav ul li a:hover {
 }
 
 .listecontact img {
-    width: 115px;
-    height: 115px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
+
+
+.feedback-input:focus { border:2px solid white; }
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: var(--couleur_principale);
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+[type="submit"]:hover { background: darkorchid; }
+
+.contact-page h2{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size:35px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+.contact-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 10%;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+form { max-width:420px; padding-top: 20px }
+
+.infoform {
+    color:white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid white;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
 
 
 /***********************************************************************************/
@@ -573,6 +647,19 @@ nav ul li a:hover {
     animation: slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
 
 }
+.infoprojets{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 80px;
+    padding-top: 30px;
+    background-color: white;
+}
+
+
 
 /***********************************************************************************/
 
@@ -812,14 +899,3 @@ nav ul li a:hover {
 
 
 
-.infoprojets{
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    padding-bottom: 80px;
-    padding-top: 30px;
-    background-color: white;
-}
