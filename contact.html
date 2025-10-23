@@ -45,9 +45,14 @@
                 ><span class="numerotation">2.</span> À propos</a>
             </li>
             <li>
-                <a href="contact.html"
-                ><span class="numerotation">3.</span> Contact</a>
+                <a href="competences.html"
+                ><span class="numerotation">3.</span> Mes compétences</a>
             </li>
+            <li>
+                <a href="contact.html"
+                ><span class="numerotation">4.</span> Contact</a>
+            </li>
+
         </ul>
     </nav>
     <hr/>
@@ -75,14 +80,17 @@
                 </div>
             </div>
 
-    <form>
-        <h2>Ecrivez moi</h2>
+    <form action="https://formsubmit.co/oriane.foy@gmail.com" method="POST">
+        <h2>Écrivez-moi</h2>
         <hr>
-        <input name="name" type="text" class="infoform" placeholder="Nom" />
-        <input name="email" type="text" class="infoform" placeholder="Email" />
-        <textarea name="text" class="infoform" placeholder="Texte"></textarea>
+        <input name="name" type="text" class="infoform" placeholder="Nom" required />
+        <input name="email" type="email" class="infoform" placeholder="Email" required />
+        <textarea name="message" class="infoform" placeholder="Votre message" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="contact.html">
         <input type="submit" value="Envoyer"/>
     </form>
+
 </div>
 </main>
 
