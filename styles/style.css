@@ -800,6 +800,19 @@ form {
 /***********************************************************************************/
 
 /************************Competences******************/
+.titrecompet h1 {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 130px;
+    color: var(--couleur_principale);
+    opacity: 0;
+    -webkit-animation: slide_gauche 1s forwards;
+    -moz-animation: slide_gauche 1s forwards;
+    -o-animation: slide_gauche 1s forwards;
+    animation: slide_gauche 1s forwards; /* appel de l'animation declarer en dessous (les 3 lignes au dessus sont juste utilisées sur les anciens navigateurs)*/
+
+}
 .carousel-container {
     width: 90%;
     max-width: 1100px;
@@ -1095,7 +1108,6 @@ form {
 }
 
 
-
 .carouselbody{
     overflow-x: hidden;
     display: flex;
@@ -1342,7 +1354,7 @@ form {
 /* =================================================================== */
 /* Competences responsive*/
 @media (max-width: 768px) {
-    .titrecontact h1{
+    .titrecompet h1{
         font-size: 70px;
     }
     .carousel-button {
@@ -1382,7 +1394,7 @@ form {
 
 }
 @media screen and (max-width: 480px) {
-    .titrecontact h1 {
+    .titrecompet h1 {
         font-size: 50px;
     }
 }
