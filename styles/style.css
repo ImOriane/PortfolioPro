@@ -747,6 +747,7 @@ form {
     transition: color 0.3s;
 }
 
+
 .projets .liens a:hover {
     color: var(--couleur_principale);
 }
