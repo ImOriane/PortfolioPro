@@ -1364,3 +1364,33 @@ form {
     -o-animation: fade 2s forwards;
     animation: fade 2s  forwards;
 }
+.projetpres {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.projetpres h2 {
+    width: 80%;
+    max-width: 900px; /* même largeur que les images */
+    margin: 0 auto; /* centre horizontalement */
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    color: var(--couleur_secondaire);
+    animation: fade 2s forwards;
+}
+
+.fleche {
+    display: block;
+    margin: 30px auto; /* centre horizontalement et ajoute un peu d'espace */
+    width: 60px; /* réduit la taille */
+    animation: bounce 2s infinite; /* lance l’animation */
+}
+
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-15px);
+    }
+}
