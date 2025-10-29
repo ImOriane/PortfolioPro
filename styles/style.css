@@ -799,7 +799,7 @@ form {
 
 /***********************************************************************************/
 
-/************************Carousel******************/
+/************************Competences******************/
 .carousel-container {
     width: 90%;
     max-width: 1100px;
@@ -1340,8 +1340,11 @@ form {
     }
 }
 /* =================================================================== */
-/* Carousel responsive*/
+/* Competences responsive*/
 @media (max-width: 768px) {
+    .titrecontact h1{
+        font-size: 70px;
+    }
     .carousel-button {
         width: 40px;
         height: 40px;
@@ -1375,6 +1378,12 @@ form {
 
     .card-image-container {
         height: 160px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .titrecontact h1 {
+        font-size: 50px;
     }
 }
 /* =================================================================== */
