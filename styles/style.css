@@ -1276,10 +1276,15 @@ form {
     }
     .projets h1 {
         font-size: 60px;
+
     }
 
     .projet-card {
         width: 85%;
+    }
+    .projetpres h2{
+        text-align: start;
+        font-size: 18px;
     }
 }
 
