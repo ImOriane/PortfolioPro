@@ -1172,6 +1172,9 @@ form {
     header .credit a {
         font-size: 30px;
     }
+    header .right{
+        padding-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 480px) {
